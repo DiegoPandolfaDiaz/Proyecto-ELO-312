@@ -50,6 +50,8 @@ como se muestra en la siguiente imagen.
 
 ![maquina search](images/maquina-de-estados-busqueda.png "SEARCH State-Machine")
 
-A continuación se muestra el diagrama de flujo de la rutina de búsqueda SEARCH 1.
+A continuación se muestra el diagrama de flujo de la rutina de búsqueda SEARCH 1. Donde ReadLine()
+es una rutina que lee el puerto asociado a los sensores de línea (digital) y retorna un entero, del
+cual los últimos 4 bits representan la siguiente tupla {Front-Left, Front-Right, Back-Left, Back-Right}.
 
 ![diagrama search 1](images/diagrama-de-flujo-search-1.png "Flowchart SEARCH 1")
