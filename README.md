@@ -45,5 +45,11 @@ Estado Finito como la que se muestra a continuación.
 Ésta máquina de estados contempla el comportamiento macro del robot y la interacción con el usuario.
 
 Se implementará también otra máquina de estados que defina la estrategia de búsqueda del adversario
-en función de una combinación de switches que será seteada antes del encendido del robot.
+en función de una combinación de switches que será seteada antes del encendido del robot. Tal y
+como se muestra en la siguiente imagen.
 
+![maquina search](images/maquina-de-estados-busqueda.png "SEARCH State-Machine")
+
+A continuación se muestra el diagrama de flujo de la rutina de búsqueda SEARCH 1.
+
+![diagrama search 1](images/diagrama-de-flujo-search-1.png "Flowchart SEARCH 1")
