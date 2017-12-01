@@ -30,6 +30,7 @@ además de la investigación de modulos nuevos que aportan al mejor desempeño d
 * Sensor de linea (digital).
 * IMU de 6DOF (3-accelerometer + 3-gyroscope).
 * Módulo de comunicación inalámbrica (RF o BT).
+* Smart Battery System SBS (deseable).
 
 ----------------------------------------------------------------------------------------------------
 
