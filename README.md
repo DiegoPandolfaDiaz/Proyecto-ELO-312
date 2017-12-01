@@ -97,3 +97,12 @@ Estado en el que se ejecutará el algoritmo de combate seleccionado mediante la 
 Aquí se implementará otra máquina de estados que definirá la rutina a ejecutar durante el combate como se muestra a continuación:
 
 ![maquina de estados de fight](images/maquina-de-estados-fight.png "START State-Machine")
+
+------------------------------------------------------------------------------
+
+# Metas Alcanzables.
+
+* 55% : Todos los módulos integrados, además de contar con almenos una rutina 
+de búsqueda y una rutina de combate.
+* Cada rutina o funcionalidad adicional sumará puntaje asignado según criterio
+del profesor.
