@@ -84,6 +84,9 @@ line, del cual los últimos 4 bits representan la siguiente tupla :
 Cada una de las rutinas de búsqueda genera un patron de movimiento distinto en el robot para asi ajustarse
 al comportamiento observado en el robot rival.
 
+Si el enemigo es detectado por alguno de los sensores de proximidad (digital), entonces el canto de subida
+en el puerto asignado para ellos generará una interrupción que cambiará el estado de la máquina a **FIGHT**
+
 ![diagrama search 1](images/diagrama-de-flujo-search.png "Flowchart SEARCH 1, 2 y 3")
 
 ##### 5. FIGHT:
