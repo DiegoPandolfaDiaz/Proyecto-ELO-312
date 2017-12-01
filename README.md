@@ -44,15 +44,53 @@ Estado Finito como la que se muestra a continuación.
 
 Ésta máquina de estados contempla el comportamiento macro del robot y la interacción con el usuario.
 
-Se implementará también otra máquina de estados que defina la estrategia de búsqueda del adversario
-en función de una combinación de switches que será seteada antes del encendido del robot. Tal y
-como se muestra en la siguiente imagen.
+#### Máquina de Estados Global.
+
+Es la máquina de estados descrita en la imagen anterior. A continuación se explicará cada uno de los estados.
+
+##### 1. IDLE:
+
+Estado inicial de la máquina que sólo puede ser accedido al encender el robot. Este estado fija las condiciones
+iniciales del sistema completo. Una vez completado el setup, se pasa al estado **STOP**.
+
+##### 2. STOP:
+
+Estado de espera (Standby) que sólo ejecuta la rutina de lectura del módulo de comunicación inalámbrica (UART 0) a la espera del
+comando *start* desde el control remoto.
+
+##### 3. WAIT:
+
+Estado que se ejecuta al recibirse la orden *start* desde el control remoto cuyo objetivo es mantener el
+robot detenido por los 5 segundos reglamentados por la competencia. Una vez transcurrido dicho tiempo se 
+pasa inmediatamente al estado **SEARCH**.
+
+##### 4. SEARCH:
+
+Estado en el que se ejecutará el algoritmo de busqueda del adversario que se haya escogido previamente
+mediante la combinación de los switches 0 y 1.
+
+Aqui se implementará también otra máquina de estados que defina la estrategia de búsqueda del adversario
+en función de la combinación de switches antes mesionada que será seteada antes del encendido del robot.
+En la figura se muestra dicha máquina de estados.
 
 ![maquina search](images/maquina-de-estados-busqueda.png "SEARCH State-Machine")
 
 A continuación se muestra el diagrama de flujo de las rutinas de búsqueda SEARCH 1, 2 y 3. Donde ReadLine()
 es una rutina que lee el puerto asociado a los sensores de línea (digital) y retorna un entero almacendo en
 line, del cual los últimos 4 bits representan la siguiente tupla :
-line = {Front-Left, Front-Right, Back-Left, Back-Right}.
+
+`line = {Front-Left, Front-Right, Back-Left, Back-Right}`
+
+Cada una de las rutinas de búsqueda genera un patron de movimiento distinto en el robot para asi ajustarse
+al comportamiento observado en el robot rival.
 
 ![diagrama search 1](images/diagrama-de-flujo-search.png "Flowchart SEARCH 1, 2 y 3")
+
+##### 5. FIGHT:
+
+Estado en el que se ejecutará el algoritmo de combate seleccionado mediante la combinación de los switches
+2 y 3.
+
+Aquí se implementará otra máquina de estados que definirá la rutina a ejecutar durante el combate como se muestra a continuación:
+
+![maquina de estados de fight](images/maquina-de-estados-fight.png "START State-Machine")
