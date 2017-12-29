@@ -1,0 +1,48 @@
+#################################
+#	Object			#
+#################################
+Sumo	KEYWORD1
+#################################
+#	Methods			#
+#################################
+init	KEYWORD2
+calcNextState	KEYWORD2
+actuator	KEYWORD2
+search	KEYWORD2
+fight	KEYWORD2
+wait	KEYWORD2
+setState	KEYWORD2
+stop	KEYWORD2
+#################################
+#	Macros			#
+#################################
+# State Machine			#
+#################################
+IDLE	LITERAL1
+STOP	LITERAL1
+WAIT	LITERAL1
+SEARCH	LITERAL1
+FIGHT	LITERAL1
+SEARCH_1	LITERAL1
+SEARCH_2	LITERAL1
+SEARCH_3	LITERAL1
+FIGHT_1	LITERAL1
+FiGHT_2	LITERAL1
+FIGHT_3	LITERAL1
+#################################
+#	PINES ARDUINO		#
+#################################
+DIFUSE_SENSOR_FL	LITERAL1
+DIFUSE_SENSOR_FR	LITERAL1
+DIFUSE_SENSOR_L	LITERAL1
+DIFUSE_SENSOR_R	LITERAL1
+LINE_SENSOR_FL	LITERAL1
+LINE_SENSOR_FR	LITERAL1
+LINE_SENSOR_BL	LITERAL1
+LINE_SENSOR_BR	LITERAL1
+ENABLE_MOTOR_L	LITERAL1
+ENABLE_MOTOR_R	LITERAL1
+PWM_MOTOR_L	LITERAL1
+PWM_MOTOR_R	LITERAL1
+CONTROL_MOTOR_L	LITERAL1
+CONTROL_MOTOR_R	LITERAL1
